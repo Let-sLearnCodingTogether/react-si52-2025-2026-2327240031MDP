@@ -38,7 +38,7 @@ function AddMovies() {
     return <div className="container mx-auto">
         <div className ="d-flex justify-content-between mb-3">
             <h2> Add Movie Page </h2>
-            <NavLink to="/" className="btn btn-primary"> Add Movies </NavLink>
+            <NavLink to="/movies" className="btn btn-primary"> Movies Page </NavLink>
         </div>
         <div>
             <Form onSubmit={handleSubmit}>
