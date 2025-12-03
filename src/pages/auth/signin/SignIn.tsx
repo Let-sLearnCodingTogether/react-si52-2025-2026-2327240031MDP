@@ -4,15 +4,13 @@ import ApiClient from "../../../utils/ApiClient";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import { NavLink } from "react-router";
 
-interface SignUpForm {
-    username : string,
+interface SignInForm {
     email : string,
     password : string
 }
 
-function SignUp() {
-    const [form, setForm] = useState<SignUpForm> ({
-            username: "",
+function SignIn() {
+    const [form, setForm] = useState<SignInForm> ({
             email: "",
             password: ""
         })
@@ -29,7 +27,7 @@ function SignUp() {
     const onSubmit = async (event : FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
-            const response = await ApiClient.post('/signup', form)
+            const response = await ApiClient.post('/signin', form)
             console.log(response)
         } catch (error) {
             console.log(error);
@@ -37,18 +35,8 @@ function SignUp() {
     }
     
    return <div className="container mx-auto">
-   <h1> Sign Up </h1> <br></br> 
+   <h1> Sign In </h1> <br></br> 
     <Form onSubmit={onSubmit}>
-                <Form.Group className="mb-3" controlId="formJudul">
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control 
-                        value={form.username}
-                        onChange={onHandleChange}
-                        name="username" 
-                        type="text" 
-                        placeholder="username"
-                    />
-                </Form.Group>
                 <Form.Group className="mb-3" controlId="formJudul">
                     <Form.Label>Email</Form.Label>
                     <Form.Control 
@@ -56,7 +44,7 @@ function SignUp() {
                         onChange={onHandleChange}
                         name="email" 
                         type="text" 
-                        placeholder="email"
+                        placeholder="email adress"
                     />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formJudul">
@@ -70,10 +58,10 @@ function SignUp() {
                     />
                 </Form.Group>
                 <br></br>
-                <Button type="submit" variant="primary">Sign Up</Button>          
-                <NavLink to = "/signIn"> <Button variant="secondary"> Sign In </Button></NavLink>        
+                <Button type="submit" variant="primary">Sign In</Button>        
+                <NavLink to = "/"> <Button variant="secondary"> Sign Up </Button></NavLink>        
             </Form>
     </div>
 }
 
-export default SignUp
+export default SignIn

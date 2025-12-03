@@ -4,7 +4,7 @@ const ApiClient = axios.create({
     baseURL : "http://localhost:3000/api",
         headers : {
             "Accept" : "application/json",
-            "Authorization" : "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkyYWNjYTVhNjJhMzFlYjM0ZTEyMDA4IiwidXNlcm5hbWUiOiJPd2VuIiwiaWF0IjoxNzY0NDEyNjEwLCJleHAiOjE3NjQ0MTk4MTB9.ZFYaYeChbBti4QqFUknFl8Ozb_w9Xkwsaof7ojjGpA8"
+            "Authorization" : "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjkzMDI5OTMwZWVmNTUzNTE1MzU2ODZkIiwidXNlcm5hbWUiOiJPd2VuIiwiaWF0IjoxNzY0NzY0MDU2LCJleHAiOjE3NjQ3NzEyNTZ9.7XCoH0n9rbpKOGX9Ev8WrfqgA35khVeXe4PTDM4DmPY"
         }
 })
 
